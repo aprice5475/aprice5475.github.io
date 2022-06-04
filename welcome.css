@@ -1,0 +1,273 @@
+/** @format */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(192, 240, 202, 0.4);
+    align-items: center;
+    min-height: 2vw;
+    padding: 10px;
+}
+
+#logo {
+    color: rgb(129, 114, 114);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
+}
+
+.nav-links {
+    display: flex;
+    width: 55%;
+    justify-content: space-around;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: rgb(129, 114, 114);
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+#burger {
+    display: none;
+    cursor: pointer;
+}
+
+#burger div {
+    height: 3px;
+    width: 40px;
+    margin: 5px 0;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    text-decoration: underline;
+}
+
+.projects a:link {
+    color: rgb(35, 172, 226);
+}
+
+.projects a:visited {
+    color: rgb(35, 172, 226);
+}
+
+.projects a:hover {
+    color: blue;
+}
+
+.projects a:active {
+    color: blue;
+}
+
+#projectHeader {
+    text-align: center;
+    color: black;
+}
+
+table {
+    width: 100%;
+}
+
+#rowIdentifiers td {
+    text-align: center;
+}
+
+table,
+th,
+td {
+    border: 3px solid rgba(123, 174, 237, 0.832);
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        overflow: hidden;
+    }
+    .nav-links {
+        position: absolute;
+        right: 0px;
+        min-width: 50%;
+        height: 92vh;
+        top: 8vh;
+        background-color: rgb(100, 87, 100);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transform: translateX(100%);
+        transition: transform 0.6s ease-in;
+    }
+    .nav-links li {
+        opacity: 0;
+    }
+    #burger {
+        display: block;
+    }
+    .nav-links li .projects a:hover {
+        font-weight: bold;
+        font-size: 18px;
+        text-transform: uppercase;
+    }
+}
+
+.nav-active {
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+    transform: rotate(-90deg);
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.nav-links li .projects a:hover {
+    font-weight: bold;
+    color: rgb(26, 123, 153);
+    text-decoration: underline;
+}
+
+main {
+    min-height: 100vh;
+    background: linear-gradient( to right top, rgb(212, 167, 146), rgb(215, 224, 126));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.glass {
+    background-color: white;
+    min-height: 90vh;
+    width: 150vh;
+    background: linear-gradient( to left bottom, rgb(255, 255, 255, 0.7), rgb(255, 255, 255, 0.3));
+    border-radius: 1rem;
+    margin: 5rem 5rem;
+    z-index: 10;
+    backdrop-filter: blur(20rem);
+    display: flex;
+}
+
+.circle1,
+.circle2,
+.circle3,
+.circle4 {
+    background-color: white;
+    width: 9rem;
+    height: 9rem;
+    background: linear-gradient( to left bottom, rgb(255, 255, 255, 0.9), rgb(255, 255, 255, 0.1));
+    border-radius: 50%;
+    position: absolute;
+    z-index: 0;
+}
+
+.circle1 {
+    top: 5rem;
+    left: 8rem;
+}
+
+.circle2 {
+    bottom: -3em;
+    left: 8rem;
+}
+
+.circle3 {
+    top: 5rem;
+    right: 8rem;
+}
+
+.circle4 {
+    bottom: -3rem;
+    right: 8rem;
+}
+
+.user img {
+    height: 7rem;
+    border-radius: 50%;
+}
+
+.links img {
+    height: 3rem;
+}
+
+.user {
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient( to left bottom, rgb(255, 255, 255, 0.8), rgb(255, 255, 255, 0.7));
+    border-radius: 1rem;
+    text-align: center;
+    color: rgb(69, 180, 165);
+    padding: 2rem;
+}
+
+.link {
+    display: flex;
+    padding: 1rem 5rem;
+    margin: 3rem 0rem;
+    align-items: center;
+    justify-content: left;
+}
+
+.link h2 {
+    padding: 0rem 2rem;
+    margin: 2rem 1rem;
+}
+
+.dashboard {
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact {
+    background: linear-gradient( to right bottom, rgba(182, 233, 209, 0.75), rgba(161, 227, 231, 0.459));
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    text-align: center;
+}
